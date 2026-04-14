@@ -1,0 +1,101 @@
+:root {
+  --primary-color: #352034bf;
+  --secondary-color: #fea2f8bf;
+  --text-color: #000000;
+  --background-color: #ffffff;
+  --transition-speed: 0.3s;
+}
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper h2 {
+  color: #fea2f8;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.wrapper h3 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  margin-left: 5%;
+}
+
+input,
+textarea {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #fea2f8;
+  box-shadow: 0 0 15px rgba(254, 162, 248, 0.3);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.submitContainer {
+  display: flex;
+  justify-content: center; /* دکمه رو وسط آوردم که شیک‌تر بشه */
+  margin-top: 10px;
+}
+
+.submitButton {
+  background: linear-gradient(45deg, #352034, #fea2f8);
+  color: white;
+  border: none;
+  padding: 12px 50px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(254, 162, 248, 0.2);
+}
+
+.submitButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(254, 162, 248, 0.4);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    margin: 20px auto;
+  }
+  input,
+  textarea {
+    width: 100%;
+    margin-left: 0;
+  }
+  .wrapper h3 {
+    margin-left: 0;
+  }
+}

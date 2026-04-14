@@ -1,0 +1,24 @@
+.container {
+  background: linear-gradient(
+    325deg,
+    #260c24 0%,
+    #3e0f47 15%,
+    #a1209d 35%,
+    #5a286c 50%,
+    #9f159f 65%,
+    #4d0e5b 85%,
+    #220634 100%
+  );
+
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 40px 20px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 20px 10px;
+  }
+}

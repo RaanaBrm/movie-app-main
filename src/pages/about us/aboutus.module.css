@@ -1,0 +1,108 @@
+.pageContainer {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mainTitle {
+  font-size: 3.5rem;
+  color: #e91e63;
+  text-shadow: 0 0 20px rgba(233, 30, 99, 0.4);
+}
+
+.subtitle {
+  color: azure;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 100px;
+  height: 4px;
+  background: #00bcd4;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #00bcd4;
+}
+
+.contentSection {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+}
+
+.about {
+  flex: 1.2;
+  padding: 35px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0px 0px 40px rgba(233, 30, 99, 0.1),
+    0 15px 35px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about h2 {
+  color: #00bcd4;
+  margin: 20px 0 10px 0;
+  font-size: 1.6rem;
+}
+
+.about p,
+.featuresList li {
+  color: azure;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+}
+
+.featuresList li {
+  margin-bottom: 8px;
+}
+
+.imageBlock {
+  flex: 1;
+  perspective: 1000px;
+}
+
+.aboutImage {
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid rgba(233, 30, 99, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  transform: rotateY(-5deg);
+  transition: 0.5s ease;
+}
+
+.imageBlock:hover .aboutImage {
+  transform: rotateY(0deg) scale(1.03);
+  border-color: #00bcd4;
+}
+
+.missionBlock {
+  text-align: center;
+  margin-top: 20px;
+  font-style: italic;
+  color: rgba(240, 255, 255, 0.6);
+}
+
+@media (max-width: 900px) {
+  .contentSection {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}

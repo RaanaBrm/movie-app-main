@@ -1,0 +1,64 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 0;
+  padding: 20px 0;
+  background: linear-gradient(135deg, #3a0c45, #7b1fa2);
+}
+
+.footer * {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.left h2 {
+  font-size: 20px;
+}
+
+.left p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.center {
+  display: flex;
+  gap: 15px;
+}
+
+.center a {
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.center a:hover {
+  color: #ff9ff3;
+}
+
+.right {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
