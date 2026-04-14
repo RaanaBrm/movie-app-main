@@ -1,10 +1,10 @@
 # Movie Hub - React Routing Project
 
-This project is a dynamic, multi-page movie management application built with React. It satisfies all the requirements by implementing advanced routing, global state management, and external API integration.
+This project is a dynamic, multi page movie management application built with React. It satisfies all the requirements by implementing advanced routing, global state management, and external API integration.
 
 ## 🔗 Project Links
 
-- **Live Site:** https://movies-app-main-zeta.vercel.app/
+- **Live Site:** https://movie-app-main-zeta.vercel.app/
 
 ## 🛠 Features & Requirements Met
 
@@ -37,4 +37,4 @@ This project is a dynamic, multi-page movie management application built with Re
 
 ## 📝 Self-Reflect (Project Plan)
 
-My plan was to create a modern "Netflix-style" interface with a dark theme. I started by setting up the routing structure, followed by the Context API to ensure data could flow between the "Add" form and the "Movies" list. The final step was integrating the OMDb API to enrich the site with real movie data.
+My plan was to create a modern kind of "Netflix style" interface with a dark purple theme. I started by setting up the routing structure, followed by the Context API to ensure data could flow between the "Add" form and the "Movies" list. The final step was integrating the OMDb API to enrich the site with real movie data.
