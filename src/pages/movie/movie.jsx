@@ -1,7 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import Navbar from '../../components/navbar/navbar';
-import Footer from '../../components/footer/footer';
 import Wrapper from '../../components/container/container';
 import style from './movie.module.css';
 import { MoviesContext } from '../../context/MoviesContext';
@@ -48,7 +46,6 @@ function Movie() {
     if (!article) {
         return (
             <Wrapper>
-                <Navbar />
                 <div className="container">
                     <div className={style.placeholder}>Loading movie...</div>
                 </div>
@@ -58,7 +55,6 @@ function Movie() {
 
     return (
         <Wrapper>
-            <Navbar />
             <div className="container">
                 <div className={style.article}>
                     <div className={style.movieContainer}>

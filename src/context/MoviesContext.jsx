@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const MoviesContext = createContext();
 
-const API_KEY = "e03240d5";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export const MoviesProvider = ({ children }) => {
 	const [movies, setMovies] = useState([]);
@@ -11,6 +11,12 @@ export const MoviesProvider = ({ children }) => {
 
 	const fetchMovies = useCallback((search = "batman") => {
 		setLoading(true);
+
+		if (!API_KEY) {
+			console.error("API Key is missing! Check your .env file.");
+			setLoading(false);
+			return;
+		}
 
 		axios
 			.get(`https://www.omdbapi.com/?s=${search}&apikey=${API_KEY}`)
@@ -20,12 +26,13 @@ export const MoviesProvider = ({ children }) => {
 						id: movie.imdbID,
 						original_title: movie.Title,
 						poster_path:
-							movie.Poster !== "N/A" ? movie.Poster : "/images/no-image.png",
+							movie.Poster !== "N/A"
+								? movie.Poster
+								: "https://via.placeholder.com/300x450?text=No+Poster",
 						release_date: movie.Year,
 						vote_average: "N/A",
 						overview: "No description available",
 					}));
-
 
 					const uniqueMovies = formattedData.filter(
 						(movie, index, self) =>
@@ -34,10 +41,9 @@ export const MoviesProvider = ({ children }) => {
 
 					setMovies(uniqueMovies);
 				} else {
-					console.warn("No movies found or invalid API key.");
+					console.warn("No movies found.");
 					setMovies([]);
 				}
-
 				setLoading(false);
 			})
 			.catch((error) => {

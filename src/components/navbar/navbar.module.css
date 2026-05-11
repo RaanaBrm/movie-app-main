@@ -2,9 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  padding: 15px 50px;
+  background: linear-gradient(135deg, #3a0c45, #7b1fa2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar p {
@@ -12,22 +17,27 @@
   font-weight: bold;
   color: white;
   margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .link {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 25px;
   margin: 0;
 }
 
 .link a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  opacity: 0.9;
 }
 
 .link a:hover {
   color: #ff9ff3;
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(255, 159, 243, 0.6);
 }

@@ -1,6 +1,4 @@
 import React, { Suspense, useContext } from 'react';
-import Navbar from '../../components/navbar/navbar';
-import Footer from '../../components/footer/footer';
 import Wrapper from '../../components/container/container';
 import { Link } from "react-router-dom";
 import styled from "./movies.module.css";
@@ -15,7 +13,7 @@ function Movies() {
         <div>
             <Wrapper>
                 <div>
-                    <Navbar />
+                    {/* تگ Navbar از اینجا حذف شد چون در Layout (App.jsx) تعریف شده است */}
                     <div className={styled.container}>
                         <div className={styled.wrapper}>
                             <div className={styled.articles}>

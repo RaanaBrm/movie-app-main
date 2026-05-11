@@ -5,7 +5,6 @@ import aboutVaultImage from '../../assets/aboutus.jpg';
 function Aboutus() {
   return (
     <Wrapper>
-      {/* نواربار از اینجا حذف شد چون قراره بره توی Layout اصلی */}
       <div className={style.pageContainer}>
         <header className={style.header}>
           <h1 className={style.mainTitle}>About Film Vault</h1>
