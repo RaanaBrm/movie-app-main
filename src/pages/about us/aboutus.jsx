@@ -1,27 +1,18 @@
-import Navbar from '../../components/navbar/navbar';
-
 import Wrapper from '../../components/container/container';
 import style from "./aboutus.module.css";
-
 import aboutVaultImage from '../../assets/aboutus.jpg';
 
 function Aboutus() {
   return (
     <Wrapper>
-      <Navbar />
+      {/* نواربار از اینجا حذف شد چون قراره بره توی Layout اصلی */}
       <div className={style.pageContainer}>
-
-
         <header className={style.header}>
           <h1 className={style.mainTitle}>About Film Vault</h1>
           <p className={style.subtitle}>Your Digital Movie Treasury</p>
           <div className={style.underline}></div>
         </header>
-
-
         <section className={style.contentSection}>
-
-
           <div className={style.about}>
             <h2>What is Film Vault?</h2>
             <p>
@@ -29,7 +20,6 @@ function Aboutus() {
               to cinema enthusiasts. Our platform empowers you to build, organize,
               and curate your own digital archive of movies and films.
             </p>
-
             <h2>Our Core Features</h2>
             <ul className={style.featuresList}>
               <li><strong>⭐ Create:</strong> Add new movies with detailed information.</li>
@@ -38,8 +28,6 @@ function Aboutus() {
               <li><strong>⭐ Delete:</strong> Remove movies you no longer wish to track.</li>
             </ul>
           </div>
-
-
           <div className={style.imageBlock}>
             <img
               src={aboutVaultImage}
@@ -50,10 +38,7 @@ function Aboutus() {
               }}
             />
           </div>
-
         </section>
-
-
         <footer className={style.missionBlock}>
           <p>
             Our mission is to simplify movie data management, making the process of
@@ -61,7 +46,6 @@ function Aboutus() {
             the movies themselves. Welcome to your digital vault.
           </p>
         </footer>
-
       </div>
     </Wrapper>
   );
